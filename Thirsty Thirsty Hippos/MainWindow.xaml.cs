@@ -30,7 +30,14 @@ namespace Thirsty_Thirsty_Hippos
         {
             InitializeComponent();
 
-            SetTimer();
+            DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += DispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+
+
+            //SetTimer();
 
             //aTimer.Stop();
             //aTimer.Dispose();
@@ -40,28 +47,37 @@ namespace Thirsty_Thirsty_Hippos
             //timer.Start();           
         }
 
+        private void DispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            Dispatcher.Invoke(
+                () => this.image.Margin = new Thickness(image.Margin.Left+5, image.Margin.Top, image.Margin.Right, image.Margin.Bottom);
+           
+               
+            );
+        }
+   
         //  Timer Tick setup
-        public static void SetTimer()
-        {
-            aTimer = new System.Timers.Timer(100);
-            
-            aTimer.Elapsed += OnTimedEvent;
-            aTimer.AutoReset = true;
-            aTimer.Enabled = true;
-            //https://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.110).aspx
+        //public static void SetTimer()
+        //{
+        //    aTimer = new System.Timers.Timer(100);
 
-        }
+        //    aTimer.Elapsed += OnTimedEvent;
+        //    aTimer.AutoReset = true;
+        //    aTimer.Enabled = true;
+        //    //https://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.110).aspx
 
-        private static void OnTimedEvent(object source, ElapsedEventArgs e)
-        {
-            if(isLeftPressed)
-            {
+        //}
 
-            }
-        }
+        //private static void OnTimedEvent(object source, ElapsedEventArgs e)
+        //{
+        //    if(isLeftPressed)
+        //    {
+
+        //    }
+        //}
 
 
-        
+
 
         private void image_KeyDown(object sender, KeyEventArgs e)
         {
