@@ -8,22 +8,23 @@ using System.Windows;
 
 namespace Thirsty_Thirsty_Hippos.Model
 {
-    public class Jogo:DependencyObject, INotifyPropertyChanged, 
+    public class Jogo:DependencyObject, INotifyPropertyChanged 
     {
-        public Jogo
-        {
-            
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public Jogo() {
+
         }
 
-        string _jogador;
-        int _pontos;
+        private string _jogador;
+        private int _pontos;
 
 
         public string Jogador
         {
             get { return _jogador; }
             set { _jogador = value;
-                OnPropertyChanged("Jogador");
+                //OnPropertyChanged("Jogador");
             }
         }
 
@@ -31,21 +32,10 @@ namespace Thirsty_Thirsty_Hippos.Model
         {
             get { return _pontos; }
             set { _pontos = value;
-                OnPropertyChanged("Pontos");
+                //OnPropertyChanged("Pontos");
             }
         }
 
-        event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-        {
-            add
-            {
-                throw new NotImplementedException();
-            }
-
-            remove
-            {
-                throw new NotImplementedException();
-            }
-        }
+       
     }
 }

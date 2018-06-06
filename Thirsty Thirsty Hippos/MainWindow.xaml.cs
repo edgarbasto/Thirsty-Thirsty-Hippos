@@ -36,72 +36,42 @@ namespace Thirsty_Thirsty_Hippos
             dispatcherTimer.Start();
 
 
-
-            //SetTimer();
-
-            //aTimer.Stop();
-            //aTimer.Dispose();
-
-            //Timer timer = new Timer(100);
-            //timer.Elapsed += async (sender, e) => await HandleTimer();
-            //timer.Start();           
         }
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
             Dispatcher.Invoke(
-                () => this.image.Margin = new Thickness(image.Margin.Left+5, image.Margin.Top, image.Margin.Right, image.Margin.Bottom);
-           
-               
+                () =>
+                {
+
+                    if (isLeftPressed)
+                    {
+                        this.txtkey.Text = "LEFT";
+                        this.image.Margin = new Thickness(image.Margin.Left + 5, image.Margin.Top, image.Margin.Right - 5, image.Margin.Bottom);
+                    }
+                }
             );
         }
-   
-        //  Timer Tick setup
-        //public static void SetTimer()
-        //{
-        //    aTimer = new System.Timers.Timer(100);
-
-        //    aTimer.Elapsed += OnTimedEvent;
-        //    aTimer.AutoReset = true;
-        //    aTimer.Enabled = true;
-        //    //https://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.110).aspx
-
-        //}
-
-        //private static void OnTimedEvent(object source, ElapsedEventArgs e)
-        //{
-        //    if(isLeftPressed)
-        //    {
-
-        //    }
-        //}
 
 
-
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                textBlock1.Text = "You Entered: " + textBox1.Text;
+                //textBox1.Text = "You Entered: " + textBox1.Text;
+            }
+        }
 
         private void image_KeyDown(object sender, KeyEventArgs e)
         {
 
-            //switch (e.Key)
-            //{
-            //    case Key.Left:
-            //        leftMargin -= 5;
-            //        e.Handled = true;
-            //        break;
-            //    case Key.Right:
-            //        leftMargin += 5;
-            //        e.Handled = true;
-            //        break;
-
-            //}
-
-            //this.image.Margin = new Thickness(leftMargin, topMargin, rightMargin, bottomMargin);
-
-
-
             if (e.Key == Key.Left)
             {
+                //Keyboard.IsKeyDown(Key.A)
                 isLeftPressed = true;
+                //this.txtkey.Text = "LEFT LEFT";
+                this.txtkey.Text = "POIS POIS";
             }
 
             if (e.Key == Key.Right)
@@ -111,7 +81,14 @@ namespace Thirsty_Thirsty_Hippos
 
         }
 
+        private void txtbox_KeyDown(object sender, KeyEventArgs e)
+        {
 
+            if (e.Key == Key.L) {
+                
+                this.txtkey.Text = "POIS POIS";
+            }
+        }
 
         private void image_KeyUp(object sender, KeyEventArgs e)
         {
