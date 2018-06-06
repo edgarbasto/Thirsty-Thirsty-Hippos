@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Thirsty_Thirsty_Hippos"
         mc:Ignorable="d"
         Title="Thirsty Thirsty Hippos" Height="600" Width="799" ResizeMode="NoResize" >
-    <Grid>
+    <Grid x:Name="theGrid" KeyDown="image_KeyDown" KeyUp="image_KeyUp" Focusable="True" Loaded="theGrid_Loaded">
        
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -14,19 +14,20 @@
                 <GradientStop Color="#FF335355" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image x:Name="image" HorizontalAlignment="Left" Margin="326,421,0,0" Width="150" Height="150" Source="images/base.png" KeyDown="image_KeyDown" KeyUp="image_KeyUp" />
-        <TextBox x:Name="txtkey" HorizontalAlignment="Left" Height="36" Margin="109,366,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <TextBox x:Name="txtbox" HorizontalAlignment="Left" Height="36" Margin="463,328,0,0" TextWrapping="Wrap" Text="dasss" VerticalAlignment="Top" Width="145" KeyDown="txtbox_KeyDown"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Margin="326,421,0,0" Width="150" Height="150" Source="images/base.png" />
+        <TextBlock x:Name="txtkey" HorizontalAlignment="Left" Height="39" Margin="89,382,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="145"/>
+        <TextBlock x:Name="txtcoord" HorizontalAlignment="Left" Height="39" Margin="481,382,0,0" TextWrapping="Wrap" Text="Coord" VerticalAlignment="Top" Width="145"/>
 
 
-        <StackPanel Background="Beige">
+
+        <!--<StackPanel Background="Beige">
             <TextBlock Width="300" Height="20">
     Type some text into the TextBox and press the Enter key.
             </TextBlock>
             <TextBox Width="300" Height="30" Name="textBox1"
            KeyDown="OnKeyDownHandler"/>
             <TextBlock Width="300" Height="100" Name="textBlock1"/>
-        </StackPanel>
+        </StackPanel>-->
 
 
     </Grid>
