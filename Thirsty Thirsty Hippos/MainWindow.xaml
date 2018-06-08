@@ -17,6 +17,11 @@
         <Image x:Name="image" HorizontalAlignment="Left" Margin="326,421,0,0" Width="150" Height="150" Source="images/base.png" />
         <TextBlock x:Name="txtkey" HorizontalAlignment="Left" Height="39" Margin="89,382,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="145"/>
         <TextBlock x:Name="txtcoord" HorizontalAlignment="Left" Height="39" Margin="481,382,0,0" TextWrapping="Wrap" Text="Coord" VerticalAlignment="Top" Width="145"/>
+        <TextBlock x:Name="txtmov" HorizontalAlignment="Left" Height="39" Margin="612,510,0,0" TextWrapping="Wrap" Text="Movimento" VerticalAlignment="Top" Width="145"/>
+
+        <Image x:Name="sagres1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="0,10,693,461"/>
+        
+
 
 
 
