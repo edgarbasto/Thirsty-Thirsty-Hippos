@@ -7,25 +7,25 @@
         mc:Ignorable="d"
         Title="Thirsty Thirsty Hippos" Height="600" Width="800" ResizeMode="NoResize" >
     <Window.Resources>
-        <!--<Storyboard x:Name="Storyline" x:Key="Storyline" Completed="Storyboard_Completed" x:Shared="False">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="sagres1">
+        <Storyboard x:Name="Storyline" x:Key="Storyline" Completed="Storyboard_Completed" x:Shared="False">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="beer0">
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="384.416"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:5" Value="688.312"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:7" Value="83.117"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:9" Value="-7.792"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="sagres1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="beer0">
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="259.74"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:5" Value="25.974"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:7" Value="20.779"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:9" Value="202.597"/>
             </DoubleAnimationUsingKeyFrames>
-        </Storyboard>-->
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
-        <!--<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource Storyline}"/>
-        </EventTrigger>-->
+        </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="theGrid" KeyDown="image_KeyDown" KeyUp="image_KeyUp" Focusable="True" Loaded="theGrid_Loaded">
 
@@ -40,17 +40,19 @@
         <TextBlock x:Name="txtcoord" HorizontalAlignment="Left" Height="39" Margin="481,382,0,0" TextWrapping="Wrap" Text="Coord" VerticalAlignment="Top" Width="145"/>
         <TextBlock x:Name="txtmov" HorizontalAlignment="Left" Height="39" Margin="612,510,0,0" TextWrapping="Wrap" Text="Movimento" VerticalAlignment="Top" Width="145"/>
 
-        <Image x:Name="sagres0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="818,321,-124,0" RenderTransformOrigin="0.5,0.5">
-            <!--<Image.RenderTransform>
+        <Image x:Name="beer0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="23,322,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>-->
+            </Image.RenderTransform>
         </Image>
 
+
+        <Image x:Name="sagres0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="818,321,-124,0" RenderTransformOrigin="0.5,0.5"></Image>
         <Image x:Name="sagres1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="818,321,-124,0" RenderTransformOrigin="0.5,0.5"></Image>
         <Image x:Name="sagres2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="818,321,-124,0" RenderTransformOrigin="0.5,0.5"></Image>
         <Image x:Name="sagres3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Source="images/sagres.png" Margin="818,321,-124,0" RenderTransformOrigin="0.5,0.5"></Image>
